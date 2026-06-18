@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Running Ribbon - Binod Bhandari</title>
+<style>
+body{margin:0;background:#0d0d0d;font-family:'Poppins',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:40px}
+
+/* ── RIBBON 1: Cyan - Left to Right ── */
+.ribbon-wrap{
+  width:100%;overflow:hidden;
+  padding:14px 0;
+  position:relative;
+}
+.ribbon-wrap.cyan{background:linear-gradient(90deg,#00c8ff,#0099cc)}
+.ribbon-wrap.dark{background:#1a1a1a;border-top:1px solid rgba(0,200,255,0.2);border-bottom:1px solid rgba(0,200,255,0.2)}
+.ribbon-wrap.purple{background:linear-gradient(90deg,#7c3aed,#a855f7)}
+
+.ribbon-track{
+  display:flex;
+  white-space:nowrap;
+  animation: scrollLeft 20s linear infinite;
+  gap:0;
+}
+.ribbon-track.reverse{
+  animation: scrollRight 20s linear infinite;
+}
+
+@keyframes scrollLeft{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+@keyframes scrollRight{
+  0%{transform:translateX(-50%)}
+  100%{transform:translateX(0)}
+}
+
+.ribbon-item{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:0 24px;
+  font-size:0.88rem;font-weight:600;
+  letter-spacing:0.06em;
+  white-space:nowrap;
+}
+.ribbon-wrap.cyan .ribbon-item{color:#003344}
+.ribbon-wrap.dark .ribbon-item{color:#00c8ff}
+.ribbon-wrap.purple .ribbon-item{color:#fff}
+
+.ribbon-item .sep{
+  opacity:0.4;font-size:1.1rem;
+}
+
+.ribbon-item .ne{
+  font-family:'Tiro Devanagari Nepali',Georgia,serif;
+  font-weight:400;
+  font-size:0.95rem;
+}
+
+/* pause on hover */
+.ribbon-wrap:hover .ribbon-track{animation-play-state:paused}
+
+/* label tag on left */
+.ribbon-label{
+  display:none;
+}
+
+/* preview note */
+.note{color:rgba(255,255,255,0.3);font-size:0.75rem;letter-spacing:0.05em;text-align:center}
+h2{color:rgba(255,255,255,0.6);font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;text-align:center;margin-bottom:-20px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Tiro+Devanagari+Nepali&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<p class="note">👇 तीनवटा style — मनपर्ने रोज्नुस्</p>
+
+<!-- OPTION 1: Cyan gradient, left to right -->
+<div style="width:100%">
+  <h2>Option 1 — Cyan</h2>
+  <br/>
+  <div class="ribbon-wrap cyan">
+    <div class="ribbon-track">
+      <!-- repeat twice for seamless loop -->
+      <span class="ribbon-item">💻 Senior Web Developer <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">🏛️ सहसचिव — RSP टिकपुर कैलाली</span> <span class="sep">✦</span></span>
+      <span class="ribbon-item">🌐 binodbhandari.com.np <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">📞 +977-9848500665</span> <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">📍 टिकापुर-१, कैलाली, सुदूरपश्चिम</span> <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">🤝 राष्ट्रिय स्वतन्त्र पार्टी</span> <span class="sep">✦</span></span>
+      <!-- duplicate for seamless -->
+      <span class="ribbon-item">💻 Senior Web Developer <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">🏛️ सहसचिव — RSP टिकपुर कैलाली</span> <span class="sep">✦</span></span>
+      <span class="ribbon-item">🌐 binodbhandari.com.np <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">📞 +977-9848500665</span> <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">📍 टिकापुर-१, कैलाली, सुदूरपश्चिम</span> <span class="sep">✦</span></span>
+      <span class="ribbon-item"><span class="ne">🤝 राष्ट्रिय स्वतन्त्र पार्टी</span> <span class="sep">✦</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION 2: Dark, reverse direction -->
+<div style="width:100%">
+  <h2>Option 2 — Dark (Reverse)</h2>
+  <br/>
+  <div class="ribbon-wrap dark">
+    <div class="ribbon-track reverse">
+      <span class="ribbon-item">💻 Senior Web Developer <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">🏛️ सहसचिव — RSP टिकपुर कैलाली</span> <span class="sep">◆</span></span>
+      <span class="ribbon-item">🌐 binodbhandari.com.np <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">📞 +977-9848500665</span> <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">📍 टिकापुर-१, कैलाली</span> <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">🤝 राष्ट्रिय स्वतन्त्र पार्टी</span> <span class="sep">◆</span></span>
+      <span class="ribbon-item">💻 Senior Web Developer <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">🏛️ सहसचिव — RSP टिकपुर कैलाली</span> <span class="sep">◆</span></span>
+      <span class="ribbon-item">🌐 binodbhandari.com.np <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">📞 +977-9848500665</span> <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">📍 टिकापुर-१, कैलाली</span> <span class="sep">◆</span></span>
+      <span class="ribbon-item"><span class="ne">🤝 राष्ट्रिय स्वतन्त्र पार्टी</span> <span class="sep">◆</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION 3: Purple gradient -->
+<div style="width:100%">
+  <h2>Option 3 — Purple</h2>
+  <br/>
+  <div class="ribbon-wrap purple">
+    <div class="ribbon-track">
+      <span class="ribbon-item">💻 Senior Web Developer <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">🏛️ सहसचिव — RSP टिकपुर कैलाली</span> <span class="sep">★</span></span>
+      <span class="ribbon-item">🌐 binodbhandari.com.np <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">📞 +977-9848500665</span> <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">📍 टिकापुर-१, कैलाली</span> <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">🤝 राष्ट्रिय स्वतन्त्र पार्टी</span> <span class="sep">★</span></span>
+      <span class="ribbon-item">💻 Senior Web Developer <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">🏛️ सहसचिव — RSP टिकपुर कैलाली</span> <span class="sep">★</span></span>
+      <span class="ribbon-item">🌐 binodbhandari.com.np <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">📞 +977-9848500665</span> <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">📍 टिकापुर-१, कैलाली</span> <span class="sep">★</span></span>
+      <span class="ribbon-item"><span class="ne">🤝 राष्ट्रिय स्वतन्त्र पार्टी</span> <span class="sep">★</span></span>
+    </div>
+  </div>
+</div>
+
+<p class="note">hover गर्नुस् — ribbon रोकिन्छ 🖱️</p>
+
+</body>
+</html>
